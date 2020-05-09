@@ -5,9 +5,7 @@ import { MENU_ITEMS } from "./modules-menu";
 @Component({
   selector: 'app-modules',
   template: `
-    <p>
-      modules works!
-    </p>
+   <app-clasificadores></app-clasificadores>
   `,
   styles: []
 })
