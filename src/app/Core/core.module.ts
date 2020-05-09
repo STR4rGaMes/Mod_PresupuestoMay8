@@ -1,22 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from "./layout/layout.component";
-import { AuthComponent } from "./auth/auth.component";
-import { NotFundComponent } from "./not-fund/not-fund.component";
+import { AuthComponent } from './auth/auth.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
-const components = [
-  LayoutComponent,
-  AuthComponent,
-  NotFundComponent,
-];
 
 @NgModule({
-  declarations: [components],
-  exports: components,
+  declarations: [AuthComponent, NotFoundComponent],
   imports: [
     CommonModule
   ]
 })
-
 export class CoreModule { }

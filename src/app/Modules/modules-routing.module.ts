@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 // modulo contenedor de Modulos
 import { ModulesComponent } from './modules.component';
+import { ButModule } from './but/but.module';
 
 // pagina principal y no encontrado
-import { NotFundComponent } from "../Core/not-fund/not-fund.component";
 
 
 const routes: Routes = [{
@@ -14,7 +14,7 @@ const routes: Routes = [{
   children: [
     {
       path: 'Inicio',
-      component: NotFundComponent,
+      component: ButModule,
     },
     {
       path: 'but',
@@ -43,7 +43,7 @@ const routes: Routes = [{
     },
     {
       path: '**',
-      component: NotFundComponent,
+      component: ButModule,
     },
   ],
 }];

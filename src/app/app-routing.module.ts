@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes,ExtraOptions, RouterModule } from '@angular/router';
 
 // import { LayoutComponent } from './Core/layout/layout.component';
-import { AuthComponent } from "./core/auth/auth.component";
-import { NotFundComponent } from "./Core/not-fund/not-fund.component";
+// import { AuthComponent } from "./core/auth/auth.component";
+// import { NotFundComponent } from "./Core/not-fund/not-fund.component";
 
 // const moduleRoutes: Routes = [
 // 
@@ -45,11 +45,17 @@ const routes: Routes = [
   { path: '**', redirectTo: 'modules' },
 ];
 
+
+const config: ExtraOptions = {
+  useHash: false,
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, config)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
 
 
 
