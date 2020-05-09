@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/aceunam/index.scss",
               "src/styles.scss"
             ],
             "scripts": []
