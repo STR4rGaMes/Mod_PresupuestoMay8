@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -7,7 +7,8 @@ import {
   FooterComponent,
   HeaderComponent,
   // sidebar tiene que generarce en un array pero por ahora es un componente mas de las vistas
-  SidebarComponent
+  SidebarComponent,
+  LayoutComponent
 } from './layout';
 
 // componente de login
@@ -20,13 +21,16 @@ AuthComponent,
 import{
   NotFoundComponent
 } from './not-found';
+import { from } from 'rxjs';
 
+// Son compoenntes cosntantes de las
 const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
   SidebarComponent,
   AuthComponent,
-  NotFoundComponent
+  NotFoundComponent,
+  LayoutComponent
 ];
 
 
@@ -35,4 +39,10 @@ const COMPONENTS = [
   exports: [CommonModule, ...COMPONENTS],
   declarations: [...COMPONENTS],
 })
-export class CoreModule { }
+export class CoreModule {
+  static forRoot(): ModuleWithProviders {
+    return <ModuleWithProviders>{
+      ngModule: CoreModule
+    };
+  }
+}

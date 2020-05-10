@@ -6,6 +6,7 @@ import { ClasBComponent } from './clas-b/clas-b.component';
 
 import { ClasAModule } from "./clas-a/clas-a.module";
 import { ClasBModule } from './clas-b/clas-b.module';
+import { ClasificadoresComponent } from './clasificadores.component';
 
 @NgModule({
   declarations: [ClasAComponent, ClasBComponent],
@@ -13,6 +14,7 @@ import { ClasBModule } from './clas-b/clas-b.module';
     CommonModule,
     ClasAModule,
     ClasBModule
-  ]
+  ],
+  exports:[ClasificadoresComponent]
 })
 export class ClasificadoresModule { }

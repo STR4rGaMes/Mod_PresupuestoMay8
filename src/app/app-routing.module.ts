@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { Routes,ExtraOptions, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 // import { LayoutComponent } from './Core/layout/layout.component';
 // import { AuthComponent } from "./core/auth/auth.component";

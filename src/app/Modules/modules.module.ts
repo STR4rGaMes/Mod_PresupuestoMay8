@@ -1,16 +1,21 @@
+
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ModulesComponent } from "./modules.component";
-
-import { ModulesRoutingModule } from './modules-routing.module';
 
 
+import { CoreModule } from '../@core/core.module';
+import { ModulesComponent } from './modules.component';
+import { ModulesRoutingModule } from "./modules-routing.module";
+import { LogModule } from './log/log.module';
 @NgModule({
-  declarations: [ModulesComponent],
   imports: [
-    CommonModule,
     ModulesRoutingModule,
+    CoreModule,
 
-  ]
+    LogModule
+  ],
+  declarations: [
+    ModulesComponent
+  ],
 })
-export class ModulesModule { }
+export class ModulesModule {
+}

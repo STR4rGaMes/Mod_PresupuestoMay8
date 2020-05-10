@@ -17,7 +17,7 @@ import { ClasificadoresModule } from './clasificadores/clasificadores.module';
   declarations: [TareasComponent, ClasificadoresComponent, MetasComponent, ProyectosComponent],
   imports: [
     CommonModule,
-    ClasificadoresModule
+    ClasificadoresComponent
   ]
 })
 export class ButModule { }
