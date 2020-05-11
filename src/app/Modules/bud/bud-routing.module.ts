@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
-// import { CommonModule } from '@angular/common';
-
-// importar los componentes de cada moodulo para las rutas
 import { ClasificadoresComponent } from './clasificadores/clasificadores.component';
 import { MetasComponent } from './metas/metas.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
@@ -20,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ButRoutingModule { }
+export class BudRoutingModule { }

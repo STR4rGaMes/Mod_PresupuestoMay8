@@ -1,27 +1,27 @@
 export const MENU_ITEMS = [
     {
       title: 'Inicio',
-      link: '.but/clasificadores',
+      link: '.bud/clasificadores',
       home: true,
     },
     {
-      title: 'but',
+      title: 'bud',
       children: [
         {
           title: 'clasificadores',
-          link: '/but/clasificadores',
+          link: '/bud/clasificadores',
         },
         {
           title: 'metas',
-          link: '/but/metas',
+          link: '/bud/metas',
         },
         {
           title: 'proyectos',
-          link: '/but/proyectos',
+          link: '/bud/proyectos',
         },
         {
           title: 'tareas',
-          link: '/but/tareas',
+          link: '/bud/tareas',
         },
       ],
     },
