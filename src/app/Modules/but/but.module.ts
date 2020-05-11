@@ -10,14 +10,15 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 // modulos
 import { ClasificadoresModule } from './clasificadores/clasificadores.module';
 
-
+import {  ButRoutingModule} from "./but-routing.module";
 
 
 @NgModule({
   declarations: [TareasComponent, ClasificadoresComponent, MetasComponent, ProyectosComponent],
   imports: [
     CommonModule,
-    ClasificadoresComponent
+    ButRoutingModule
+    
   ]
 })
 export class ButModule { }

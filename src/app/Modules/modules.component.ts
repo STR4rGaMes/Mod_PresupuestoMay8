@@ -5,9 +5,11 @@ import { MENU_ITEMS } from "./modules-menu";
 @Component({
   selector: 'app-modules',
   template: `
-    <p>
-      modules works!
-    </p>
+    <app-layout>
+    
+    <router-outlet></router-outlet>
+    Hola mudno
+    </app-layout>
   `,
   styles: []
 })

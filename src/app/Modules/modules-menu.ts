@@ -1,7 +1,7 @@
 export const MENU_ITEMS = [
     {
       title: 'Inicio',
-      link: './Core/not-fund',
+      link: '.but/clasificadores',
       home: true,
     },
     {
