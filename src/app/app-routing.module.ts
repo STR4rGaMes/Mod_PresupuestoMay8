@@ -1,27 +1,30 @@
 import { Routes,ExtraOptions, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { AuthComponent } from './core/auth';
+import { AuthGaurd } from "./services/auth.guard";
 
-import { LayoutComponent } from './core/layout/layout.component';
-import { AuthComponent } from "./core/auth/auth.component";
+  const routes: Routes = [
 
-const routes: Routes = [
- 
   {
-    path: 'modules',
+    path: 'auth',
+    component: AuthComponent,
+  }, 
+
+  {
+    path: 'Modules',
     loadChildren: () => import('./Modules/modules.module')
       .then(m => m.ModulesModule),
   },
-  { path: '', redirectTo: 'modules', pathMatch: 'full' },
-  { path: '**', redirectTo: 'modules' },
+  { path: '', redirectTo: 'Modules',pathMatch: 'full'},
+  { path: '**', redirectTo: 'auth' },
 ];
 
 
-const config: ExtraOptions = {
-  useHash: false,
-};
+
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, config)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {

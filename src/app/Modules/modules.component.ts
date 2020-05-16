@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
 
-import { MENU_ITEMS } from "./modules-menu";
-
 @Component({
   selector: 'app-modules',
   template: `
-  Hola mudno
-  `,
-  styles: []
+  <app-layout>
+  <router-outlet class="main"></router-outlet>
+  </app-layout> `
+      ,
 })
 
 
 export class ModulesComponent {
-
-  menu = MENU_ITEMS;
 }
 
 

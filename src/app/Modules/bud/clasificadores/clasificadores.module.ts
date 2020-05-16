@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ClasAComponent } from './clas-a/clas-a.component';
-import { ClasBComponent } from './clas-b/clas-b.component';
-
-import { ClasAModule } from "./clas-a/clas-a.module";
-import { ClasBModule } from './clas-b/clas-b.module';
 import { ClasificadoresComponent } from './clasificadores.component';
+import { ClasificadoresAComponent } from "./clasificadores-a/clasificadores-a.component";
+import { ClasificadoresBComponent } from './clasificadores-b/clasificadores-b.component';
+import { BudRoutingModule } from "../bud-routing.module";
 
 @NgModule({
-  declarations: [ClasAComponent, ClasBComponent],
+  declarations: [ClasificadoresComponent,ClasificadoresAComponent, ClasificadoresBComponent],
   imports: [
-    CommonModule,
-    ClasAModule,
-    ClasBModule
-  ],
-  exports:[ClasificadoresComponent]
+    CommonModule
+  ]
+  
+
 })
 export class ClasificadoresModule { }

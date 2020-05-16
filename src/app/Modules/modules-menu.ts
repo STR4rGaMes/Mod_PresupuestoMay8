@@ -1,7 +1,7 @@
 export const MENU_ITEMS = [
     {
-      title: 'Inicio',
-      link: '.bud/clasificadores',
+      title: 'welcome',
+      link: '/welcome',
       home: true,
     },
     {

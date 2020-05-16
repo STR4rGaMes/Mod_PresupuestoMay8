@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { RouterModule } from '@angular/router';
 
 // componentes de la primera vista
 import {
@@ -21,7 +21,11 @@ AuthComponent,
 import{
   NotFoundComponent
 } from './not-found';
-import { from } from 'rxjs';
+
+import {
+   WelcomeComponent
+} from './welcome/welcome.component';
+'./pageblank/pageblank.component';
 
 // Son compoenntes cosntantes de las
 const COMPONENTS = [
@@ -30,19 +34,22 @@ const COMPONENTS = [
   SidebarComponent,
   AuthComponent,
   NotFoundComponent,
-  LayoutComponent
+  LayoutComponent,
+  WelcomeComponent,
 ];
 
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   exports: [CommonModule, ...COMPONENTS],
   declarations: [...COMPONENTS],
 })
 export class CoreModule {
   static forRoot(): ModuleWithProviders {
     return <ModuleWithProviders>{
-      ngModule: CoreModule
+      ngModule: CoreModule,
+      providers: [
+      ],
     };
   }
 }
